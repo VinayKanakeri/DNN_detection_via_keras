@@ -36,7 +36,7 @@ checkpoint = callbacks.ModelCheckpoint('./temp_trained_25.h5', monitor='val_bit_
 model.fit_generator(
     training_gen(1000,25),
     steps_per_epoch=50,
-    epochs=10000,
+    epochs=100,
     validation_data=validation_gen(1000, 25),
     validation_steps=1,
     callbacks=[checkpoint],
